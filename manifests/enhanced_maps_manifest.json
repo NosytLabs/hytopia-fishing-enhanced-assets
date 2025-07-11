@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "maps": {
+    "coral-bay-enhanced": {
+      "name": "Coral Bay Enhanced",
+      "description": "Vibrant coral reef paradise with enhanced water physics and immersive effects",
+      "version": "2.1.0",
+      "author": "Enhanced Fishing Team",
+      "created": "2024-01-15",
+      "blockCount": 4096,
+      "difficulty": "normal",
+      "fishingSpots": 12,
+      "features": [
+        "enhanced_water_physics",
+        "svg_block_textures",
+        "coral_reef_gardens",
+        "deep_ocean_trenches",
+        "dynamic_lighting",
+        "particle_effects",
+        "3d_spatial_audio",
+        "weather_integration",
+        "fish_ai_behaviors",
+        "treasure_hunting_spots",
+        "bioluminescent_effects",
+        "underwater_currents",
+        "caustic_lighting",
+        "realistic_buoyancy"
+      ],
+      "physics": {
+        "waterDensity": 1.2,
+        "currentStrength": 0.3,
+        "waveAmplitude": 0.8,
+        "buoyancyFactor": 1.1
+      },
+      "audio": {
+        "ambientTrack": "coral-reef-paradise.ogg",
+        "waterSounds": "tropical-waves.ogg",
+        "spatialAudio": true
+      },
+      "specialFeatures": {
+        "coralGardens": {
+          "count": 8,
+          "fishAttraction": 1.5,
+          "bioluminescence": true
+        },
+        "deepTrenches": {
+          "count": 3,
+          "maxDepth": 50,
+          "rareFishSpawns": true
+        },
+        "treasureSpots": {
+          "count": 5,
+          "difficulty": "medium",
+          "rewards": ["rare_fish", "special_bait", "equipment_upgrades"]
+        }
+      },
+      "filePath": "assets/maps/enhanced/coral-bay-enhanced.json"
+    }
+  },
+  "totalMaps": 1,
+  "lastUpdated": "2024-01-15T10:30:00Z"
+}
