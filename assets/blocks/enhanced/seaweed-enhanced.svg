@@ -1,0 +1,113 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Seaweed gradient -->
+    <linearGradient id="seaweedGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#2E7D32;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#388E3C;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#4CAF50;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#66BB6A;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- Flow filter for movement -->
+    <filter id="flow">
+      <feTurbulence baseFrequency="0.02" numOctaves="2" result="flow" />
+      <feDisplacementMap in="SourceGraphic" in2="flow" scale="1.5" />
+    </filter>
+    
+    <!-- Shadow effect -->
+    <filter id="seaweedShadow">
+      <feDropShadow dx="1" dy="2" stdDeviation="1" flood-color="rgba(0,0,0,0.3)" />
+    </filter>
+  </defs>
+  
+  <!-- Ocean floor base -->
+  <rect x="0" y="55" width="64" height="9" fill="#8D6E63" opacity="0.6" />
+  
+  <!-- Main seaweed fronds -->
+  <path d="M15,60 Q12,45 18,30 Q15,15 20,5" 
+        stroke="url(#seaweedGradient)" stroke-width="3" fill="none" 
+        filter="url(#seaweedShadow)">
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="0 15 60; 3 15 60; -2 15 60; 0 15 60" 
+                      dur="4s" repeatCount="indefinite" />
+  </path>
+  
+  <path d="M25,60 Q28,40 22,25 Q27,10 23,0" 
+        stroke="url(#seaweedGradient)" stroke-width="4" fill="none" 
+        filter="url(#seaweedShadow)">
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="0 25 60; -2 25 60; 4 25 60; 0 25 60" 
+                      dur="5s" repeatCount="indefinite" />
+  </path>
+  
+  <path d="M35,60 Q32,42 38,28 Q35,12 40,2" 
+        stroke="url(#seaweedGradient)" stroke-width="3.5" fill="none" 
+        filter="url(#seaweedShadow)">
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="0 35 60; 2 35 60; -3 35 60; 0 35 60" 
+                      dur="4.5s" repeatCount="indefinite" />
+  </path>
+  
+  <path d="M45,60 Q48,38 42,22 Q47,8 43,0" 
+        stroke="url(#seaweedGradient)" stroke-width="3" fill="none" 
+        filter="url(#seaweedShadow)">
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="0 45 60; -1 45 60; 3 45 60; 0 45 60" 
+                      dur="3.8s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- Seaweed leaves/blades -->
+  <ellipse cx="18" cy="35" rx="2" ry="8" fill="url(#seaweedGradient)" opacity="0.8" 
+           filter="url(#flow)">
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="-10 18 35; 5 18 35; -10 18 35" 
+                      dur="3s" repeatCount="indefinite" />
+  </ellipse>
+  
+  <ellipse cx="22" cy="20" rx="1.5" ry="6" fill="url(#seaweedGradient)" opacity="0.7" 
+           filter="url(#flow)">
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="15 22 20; -5 22 20; 15 22 20" 
+                      dur="3.5s" repeatCount="indefinite" />
+  </ellipse>
+  
+  <ellipse cx="38" cy="40" rx="2.2" ry="7" fill="url(#seaweedGradient)" opacity="0.8" 
+           filter="url(#flow)">
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="8 38 40; -8 38 40; 8 38 40" 
+                      dur="4.2s" repeatCount="indefinite" />
+  </ellipse>
+  
+  <ellipse cx="42" cy="25" rx="1.8" ry="5" fill="url(#seaweedGradient)" opacity="0.7" 
+           filter="url(#flow)">
+    <animateTransform attributeName="transform" type="rotate" 
+                      values="-12 42 25; 8 42 25; -12 42 25" 
+                      dur="3.2s" repeatCount="indefinite" />
+  </ellipse>
+  
+  <!-- Floating particles (oxygen bubbles) -->
+  <circle cx="20" cy="45" r="1" fill="rgba(255,255,255,0.6)" opacity="0.7">
+    <animateTransform attributeName="transform" type="translate" 
+                      values="0,0; -2,-20; 0,-40" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;0.3;0" dur="6s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="40" cy="50" r="0.8" fill="rgba(255,255,255,0.5)" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" 
+                      values="0,0; 1,-25; 0,-50" dur="7s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.2;0" dur="7s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Water current indicators -->
+  <path d="M5,30 Q15,28 25,30" stroke="rgba(135,206,235,0.3)" stroke-width="1" fill="none">
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="4s" repeatCount="indefinite" />
+    <animateTransform attributeName="transform" type="translate" 
+                      values="0,0; 10,0; 20,0" dur="4s" repeatCount="indefinite" />
+  </path>
+  
+  <path d="M10,45 Q20,43 30,45" stroke="rgba(135,206,235,0.2)" stroke-width="1" fill="none">
+    <animate attributeName="opacity" values="0.2;0.05;0.2" dur="5s" repeatCount="indefinite" />
+    <animateTransform attributeName="transform" type="translate" 
+                      values="0,0; 8,0; 16,0" dur="5s" repeatCount="indefinite" />
+  </path>
+</svg>

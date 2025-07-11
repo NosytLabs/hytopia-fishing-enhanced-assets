@@ -1,0 +1,139 @@
+{
+  "version": "2.1.0",
+  "hytopiaCompliance": {
+    "sdkVersion": "latest",
+    "blockFormat": "standard",
+    "coordinateSystem": "xyz"
+  },
+  "metadata": {
+    "name": "Coral Bay Enhanced",
+    "description": "Vibrant coral reef paradise with enhanced water physics and immersive effects",
+    "author": "Enhanced Fishing Team",
+    "created": "2024-01-15",
+    "blockCount": 4096,
+    "features": [
+      "enhanced_water_physics",
+      "svg_block_textures",
+      "coral_reef_gardens",
+      "deep_ocean_trenches",
+      "dynamic_lighting",
+      "particle_effects",
+      "3d_spatial_audio",
+      "weather_integration",
+      "fish_ai_behaviors",
+      "treasure_hunting_spots"
+    ]
+  },
+  "physics": {
+    "waterDensity": 1.2,
+    "currentStrength": 0.3,
+    "waveAmplitude": 0.8,
+    "buoyancyFactor": 1.1,
+    "viscosity": 0.8,
+    "turbulence": 0.2
+  },
+  "audio": {
+    "ambientTrack": "coral-reef-paradise.ogg",
+    "waterSounds": "tropical-waves.ogg",
+    "spatialAudio": true,
+    "reverbZones": [
+      {
+        "area": [[-10, -5, -10], [10, 5, 10]],
+        "reverbType": "underwater",
+        "intensity": 0.7
+      }
+    ]
+  },
+  "lighting": {
+    "sunlightIntensity": 0.8,
+    "underwaterTint": "#4A90E2",
+    "dynamicShadows": true,
+    "causticsEnabled": true,
+    "ambientColor": "#87CEEB"
+  },
+  "blockTypes": [
+    {
+      "name": "water",
+      "textureURI": "assets/blocks/enhanced/clear-water-enhanced.svg",
+      "physics": {
+        "density": 1.0,
+        "flowRate": 0.5,
+        "transparency": 0.8
+      },
+      "particles": {
+        "bubbles": true,
+        "ripples": true,
+        "caustics": true
+      }
+    },
+    {
+      "name": "deep_water",
+      "textureURI": "assets/blocks/enhanced/deep-ocean-water-enhanced.svg",
+      "physics": {
+        "density": 1.2,
+        "flowRate": 0.3,
+        "transparency": 0.6,
+        "pressure": 1.5
+      },
+      "particles": {
+        "bioluminescence": true,
+        "deepCurrents": true,
+        "pressureBubbles": true
+      }
+    },
+    {
+      "name": "sand",
+      "textureURI": "assets/blocks/sand.png",
+      "physics": {
+        "density": 2.0,
+        "friction": 0.8
+      }
+    },
+    {
+      "name": "coral",
+      "textureURI": "assets/blocks/enhanced/coral-enhanced.svg",
+      "physics": {
+        "density": 1.8,
+        "fishAttraction": 1.5
+      },
+      "particles": {
+        "coralGlow": true,
+        "fishSpawns": true
+      }
+    },
+    {
+      "name": "seaweed",
+      "textureURI": "assets/blocks/enhanced/seaweed-enhanced.svg",
+      "physics": {
+        "density": 0.9,
+        "sway": true,
+        "currentResponse": 2.0
+      },
+      "particles": {
+        "swayMotion": true,
+        "oxygenBubbles": true
+      }
+    },
+    {
+      "name": "dock",
+      "textureURI": "assets/blocks/enhanced/wooden-dock-enhanced.svg",
+      "physics": {
+        "density": 0.7,
+        "buoyancy": 0.8
+      }
+    },
+    {
+      "name": "rock",
+      "textureURI": "assets/blocks/rock.png",
+      "physics": {
+        "density": 2.5,
+        "friction": 0.9
+      }
+    }
+  ],
+  "blocks": [
+    {"x": -32, "y": 0, "z": -32, "type": "deep_water"},
+    {"x": -31, "y": 0, "z": -32, "type": "deep_water"},
+    {"x": -30, "y": 0, "z": -32, "type": "deep_water"}
+  ]
+}
